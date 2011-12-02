@@ -77,7 +77,7 @@ module Tokamak
           arg.kind_of?(Hash) ? hashes << arg : vals << arg
         end
 
-        if hashes.empty?
+        if true # Force this to be true... because we don't want to include attributes as JSON elements (was: hashes.empty?)
           # only simple values
           unless vals.empty?
             vals = vals.first if vals.size == 1
