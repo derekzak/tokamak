@@ -59,7 +59,7 @@ module Tokamak
       end
 
       def representation
-        @raw.to_xml
+        @raw.to_xml.sub!(/^(\s+)?<\?xml version="1\.0"\?>\n?/, "")
       end
 
     private
