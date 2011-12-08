@@ -90,7 +90,7 @@ module Tokamak
             }
           elsif arg.kind_of?(Time) || arg.kind_of?(DateTime)
             # Adding XML node content
-            n.content = arg.xmlschema
+            n.content = arg.strftime("%Y-%m-%d %H:%M:%S %Z")
           else
             n.content = arg
           end
